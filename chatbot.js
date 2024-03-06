@@ -179,7 +179,7 @@ const chatboxCSS = `
 }
 `;
 
-// Appended the chatbox to the DOM
+/// Appended the chatbox to the DOM
 document.body.innerHTML += chatboxHTML;
 
 // Added the CSS to the DOM
@@ -192,12 +192,12 @@ document.getElementById('open-chatbox').addEventListener('click', function () {
     this.style.display = 'none';
 });
 
-function closeChatbox() {
+document.getElementById('close-button').addEventListener('click', function () {
     document.getElementById('chatbox').style.display = 'none';
     document.getElementById('open-chatbox').style.display = 'block';
-}
+});
 
-function toggleMinimizeChatbox() {
+document.getElementById('minimize-button').addEventListener('click', function () {
     var chatbox = document.getElementById('chatbox');
     var button = document.getElementById('minimize-button');
     var fullscreenButton = document.getElementById('fullscreen-button');
@@ -211,9 +211,9 @@ function toggleMinimizeChatbox() {
         button.innerHTML = '&#x2013;';
         fullscreenButton.innerHTML = '&#x2922;';
     }
-}
+});
 
-function toggleFullscreenChatbox() {
+document.getElementById('fullscreen-button').addEventListener('click', function () {
     var chatbox = document.getElementById('chatbox');
     var button = document.getElementById('fullscreen-button');
     var minimizeButton = document.getElementById('minimize-button');
@@ -228,7 +228,8 @@ function toggleFullscreenChatbox() {
         button.innerHTML = '&#x2922;';
         minimizeButton.innerHTML = '&#x2013;';
     }
-}
+});
+
 function addMessage(text, sender) {
     const messages = document.getElementById('messages');
     const message = document.createElement('li');
