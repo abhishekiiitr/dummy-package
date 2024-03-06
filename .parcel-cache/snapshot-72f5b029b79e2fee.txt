@@ -1,0 +1,7 @@
+6
+47/home/tg0004/Desktop/dummy-package/package.json1709708184197829944 0
+45/home/tg0004/Desktop/dummy-package/chatbot.js1709707725563985148 0
+50/home/tg0004/Desktop/dummy-package/dist/chatbot.js1709708188769746930 0
+54/home/tg0004/Desktop/dummy-package/dist/chatbot.js.map1709708188781746712 0
+39/home/tg0004/Desktop/dummy-package/dist1709708188781746712 1
+34/home/tg0004/Desktop/dummy-package1709708188749747293 1
