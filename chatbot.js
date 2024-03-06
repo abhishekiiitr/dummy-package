@@ -14,9 +14,9 @@ const chatboxHTML = `
         <div id="chatbox-header">
             <span>Chat</span>
             <div>
-                <button id="minimize-button" onclick="toggleMinimizeChatbox()">&#x2013;</button>
-                <button id="fullscreen-button" onclick="toggleFullscreenChatbox()">&#x2922;</button>
-                <button onclick="closeChatbox()">&#x2715;</button>
+                <button id="minimize-button">&#x2013;</button>
+                <button id="fullscreen-button">&#x2922;</button>
+                <button id="close-button">&#x2715;</button>
             </div>
         </div>
         <div id="chatbox-content">
@@ -179,7 +179,7 @@ const chatboxCSS = `
 }
 `;
 
-/// Appended the chatbox to the DOM
+// Appended the chatbox to the DOM
 document.body.innerHTML += chatboxHTML;
 
 // Added the CSS to the DOM

@@ -14,9 +14,9 @@ const $108de96807862aa0$var$chatboxHTML = `
         <div id="chatbox-header">
             <span>Chat</span>
             <div>
-                <button id="minimize-button" onclick="toggleMinimizeChatbox()">&#x2013;</button>
-                <button id="fullscreen-button" onclick="toggleFullscreenChatbox()">&#x2922;</button>
-                <button onclick="closeChatbox()">&#x2715;</button>
+                <button id="minimize-button">&#x2013;</button>
+                <button id="fullscreen-button">&#x2922;</button>
+                <button id="close-button">&#x2715;</button>
             </div>
         </div>
         <div id="chatbox-content">
@@ -187,11 +187,11 @@ document.getElementById("open-chatbox").addEventListener("click", function() {
     document.getElementById("chatbox").style.display = "flex";
     this.style.display = "none";
 });
-function $108de96807862aa0$var$closeChatbox() {
+document.getElementById("close-button").addEventListener("click", function() {
     document.getElementById("chatbox").style.display = "none";
     document.getElementById("open-chatbox").style.display = "block";
-}
-function $108de96807862aa0$var$toggleMinimizeChatbox() {
+});
+document.getElementById("minimize-button").addEventListener("click", function() {
     var chatbox = document.getElementById("chatbox");
     var button = document.getElementById("minimize-button");
     var fullscreenButton = document.getElementById("fullscreen-button");
@@ -205,8 +205,8 @@ function $108de96807862aa0$var$toggleMinimizeChatbox() {
         button.innerHTML = "&#x2013;";
         fullscreenButton.innerHTML = "&#x2922;";
     }
-}
-function $108de96807862aa0$var$toggleFullscreenChatbox() {
+});
+document.getElementById("fullscreen-button").addEventListener("click", function() {
     var chatbox = document.getElementById("chatbox");
     var button = document.getElementById("fullscreen-button");
     var minimizeButton = document.getElementById("minimize-button");
@@ -221,7 +221,7 @@ function $108de96807862aa0$var$toggleFullscreenChatbox() {
         button.innerHTML = "&#x2922;";
         minimizeButton.innerHTML = "&#x2013;";
     }
-}
+});
 function $108de96807862aa0$var$addMessage(text, sender) {
     const messages = document.getElementById("messages");
     const message = document.createElement("li");
