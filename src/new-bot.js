@@ -10,8 +10,9 @@ export class ChatBot {
         console.log('conversation id in construcutre ', this.conversationId);
         console.log('Chatbot id ', this.chatbotId);
         console.log('websocket ', this.ws);
-        this.appendHTMLAndCSS();
-        this.addEventListeners();
+        this.appendHTMLAndCSS().then(() => {
+            this.addEventListeners();
+        });
         document.getElementById('notif').classList.toggle('visible');
 
     }
