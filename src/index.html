@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body style="background-color: rgb(43, 52, 43)">
+    <div id="dashboard-button-container">
+        <button id="open-dashboard">
+            <div id="chat-icon" style="background-image: url('../assets/ui-motion.gif');"></div>
+        </button>
+        <img id="icon-button-badge" src="../assets/Alarm.svg"></img>
+        <div id="notif-container">
+            <div id="notif">Hey there!&nbsp; <span id="toggle-msg"> Sparky here.</span></div>
+        </div>
+    </div>
+    <button id="close-all">
+        <div id="close-icon" style="background-image: url('../assets/Trigger.svg');"></div>
+    </button>
+    <div id="dashboard">
+        <div id="dashboard-header">
+            <div id="header-text">
+                <p>Hi there! &#128075;</p>
+                <p>Sparky here</p>
+                <p>How can we help?</p>
+            </div>
+        </div>
+        <div id="dashboard-footer">
+            <div id="footer-msg">
+                <p>Send us a message</p>
+                <p>We typically reply in few minutes</p>
+            </div id="button">
+            <button id="open-chatbox">
+                <img src="../assets/open-chat.svg" alt="start-chat">
+            </button>
+        </div>
+    </div>
+    <div id="chatbox">
+        <div id="chatbox-header">
+            <button id="close-chatbox">
+                <img src="../assets/back.svg" alt="back-ios">
+            </button>
+            <div>
+                <div class="header-line">
+                    <span>Sparky</span>
+                </div>
+                <div class="header-line-small">
+                    <span>online </span>
+                </div>
+            </div>
+            <div id="rounded-space">
+                <img id="bot-gif" src="../assets/ui-motion.gif" />
+            </div>
+        </div>
+        <div id="chatbox-content">
+            <div id="loader-container">
+                <span class="loader"></span>
+                <button id="reconnect-button">Connecting...</button>
+            </div>
+            <span id="response-loader"></span>
+            <ul id="messages"></ul>
+            <div id="suggestion-buttons-container">
+                <div id="suggestionButtons">
+                    <button id="suggestion-button-1"><span>Taekwondo lesson</span></button>
+                    <button id="suggestion-button-2"><span>Thanks !</span></button>
+                </div>
+                <button id="clear-button">
+                    <img src="../assets/clear.svg" alt="">
+                </button>
+            </div>
+        </div>
+
+        <div id="input-container">
+            <!-- <button id="mic-button">
+                <img src="../assets/mic.svg" alt="Mic Icon">
+            </button> -->
+            <div id='input-wrapper'>
+                <input type="text" id="message-input" placeholder="Type message here...">
+
+            </div>
+            <button id="send-button">
+                <img src="../assets/send-msg.svg" alt="Send Icon">
+            </button>
+
+        </div>
+    </div>
+
+    <script src="main1.js"></script>
+</body>
+
+</html>
