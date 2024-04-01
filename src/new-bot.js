@@ -1027,7 +1027,6 @@ ul {
 }`
 export class ChatBot {
     constructor(CHATBOT_ID) {
-        this.addEventListeners();
         this.chatbotId = CHATBOT_ID;
         this.conversationId = this.getCookie('conversation_id') || null;
         this.ws = null;
@@ -1036,11 +1035,13 @@ export class ChatBot {
         console.log('conversation id in construcutre ', this.conversationId);
         console.log('Chatbot id ', this.chatbotId);
         console.log('websocket ', this.ws);
-        document.getElementById('notif').classList.toggle('visible');
         document.body.innerHTML += chatboxHTML;
         const style = document.createElement('style');
         style.innerHTML = chatboxCSS;
         document.head.appendChild(style);
+        this.addEventListeners();
+        document.getElementById('notif').classList.toggle('visible');
+
     }
     addEventListeners() {
         document.getElementById('open-chatbox').addEventListener('click', () => this.handleOpenChatboxClick());
