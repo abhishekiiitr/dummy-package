@@ -10,13 +10,20 @@ export class ChatBot {
         console.log('conversation id in construcutre ', this.conversationId);
         console.log('Chatbot id ', this.chatbotId);
         console.log('websocket ', this.ws);
+        this.appendHTMLAndCSS();
         this.addEventListeners();
         document.getElementById('notif').classList.toggle('visible');
-        document.body.innerHTML += chatboxHTML;
-        const style = document.createElement('style');
-        style.innerHTML = chatboxCSS;
-        document.head.appendChild(style);
 
+    }
+    async appendHTMLAndCSS() {
+        const responseHTML = await fetch(chatboxHTML);
+        const responseCSS = await fetch(chatboxCSS);
+        const html = await responseHTML.text();
+        const css = await responseCSS.text();
+        document.body.innerHTML += html;
+        const style = document.createElement('style');
+        style.innerHTML = css;
+        document.head.appendChild(style);
     }
     addEventListeners() {
         document.getElementById('open-chatbox').addEventListener('click', () => this.handleOpenChatboxClick());
